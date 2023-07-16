@@ -37,7 +37,7 @@ char convert(int a) {  // this function converts a number to a piece
 		x = ' ';
 	return x;
 }
-class PlayerInfo { // Player info like the current position of the king
+class PlayerInfo {
 	static int enpassant;
 public:
 	static void findKing(int x, int& whereRow, int& whereCol, int** grid) {
@@ -227,7 +227,7 @@ public:
 		return 0;
 	}
 };
-class AfterMoving : public Moving, public Check { // this class will check if a piece can move there
+class AfterMoving : public Moving, public Check {
 public:
 	int tempWhere, tempTo;
 	AfterMoving(int wRow, int wCol, int tRow, int tCol, int x, int** grid) {
